@@ -21,13 +21,13 @@ try {
           org: org
         });
       let codeScanningData = JSON.stringify(codeScanResponse, null, 2);
-      fs.writeFileSync('data/code-scan.json', codeScanningData);
+      fs.writeFileSync('code-scan.json', codeScanningData);
 
       const secretScanResponse = await octokit.paginate('GET /orgs/{org}/secret-scanning/alerts', {
           org: org
         });
       let secretScanningData = JSON.stringify(secretScanResponse, null, 2);
-      fs.writeFileSync('data/secret-scan.json', secretScanningData);
+      fs.writeFileSync('secret-scan.json', secretScanningData);
   }
 
   getAlerts()
