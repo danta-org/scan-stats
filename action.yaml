@@ -1,0 +1,14 @@
+name: 'Get Security Alerts'
+description: 'Greet someone and record the time'
+inputs:
+  org:  # id of input
+    description: 'GitHub Organization'
+    required: true
+    default: ${{ github.repository_owner }} 
+  githubtoken:  # id of input
+    description: 'GitHub Token'
+    required: true
+    default: ''
+runs:
+  using: 'node16'
+  main: 'index.js'
